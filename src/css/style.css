@@ -1,0 +1,84 @@
+:root {
+	--primary: #bf9b69;
+	--secondary: #773c8c;
+	--background: #174a3c;
+	--text: #120717;
+	--text-secondary: #fdf5ff;
+}
+
+html {
+	background: var(--background);
+	color: var(--text);
+	font-family: helvetica, arial, sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 1rem;
+}
+
+main {
+	background: var(--primary);
+	max-width: 1200px;
+	margin: auto;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+a {
+	color: inherit;
+}
+
+dt {
+	margin: 0.25rem 0 0.5rem;
+}
+
+dd {
+	margin: 0.5rem 0 0.25rem 40px;
+
+	& > ul:nth-child(1) {
+		padding-left: 0;
+	}
+}
+
+table {
+	border-collapse: collapse;
+
+	&, th, td {
+		border: 1px solid var(--text);
+		padding: 0.25rem;
+	}
+}
+
+.swatch {
+	display: inline-block;
+	height: 1.2em;
+	width: 2.4em;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 1px;
+	text-align: center;
+
+	&.swatch-primary {
+		color: var(--text);
+		background: var(--primary);
+	}
+
+	&.swatch-secondary {
+		color: var(--text-secondary);
+		border-color: var(--text-secondary);
+		background: var(--secondary);
+	}
+
+	&.swatch-background {
+		background: var(--background);
+	}
+
+	&.swatch-text {
+		background: var(--text);
+	}
+
+	&.swatch-text-secondary {
+		background: var(--text-secondary);
+	}
+}
