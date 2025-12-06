@@ -1,5 +1,3 @@
-const malClientId = import.meta.env.VITE_MAL_CLIENT_ID;
-
 async function convertToJson(res) {
 	if(res.ok) {
 		const resStr = await res.text();
@@ -42,15 +40,9 @@ export default class AnimeList {
 			else return this.data;
 		}
 		else {
-			const headers = new Headers();
-			headers.set("X-MAL-CLIENT-ID", malClientId);
-			const options = {
-				headers,
-				method: "get",
-			};
 			const params = new URLSearchParams(this.parameters);
 			try {
-				const apiRes = await fetch(`${this.target_url}?${params}`, options);
+				const apiRes = await fetch(`${this.target_url}?${params}`);
 				const apiData = await convertToJson(apiRes);
 				this.#data = apiData.data;
 				AnimeList.cache.push(this);
