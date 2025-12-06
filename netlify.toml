@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/mal/*"
+  to = "https://api.myanimelist.net/v2/:splat"
+  status = 200
+  [redirects.headers]
+    X-MAL-CLIENT-ID = "50dc7f86c542eba492fb404f45919a17"
