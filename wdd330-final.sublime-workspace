@@ -1,0 +1,822 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"lo",
+				"locals"
+			],
+			[
+				"show",
+				"showModal"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"com",
+				"commentOptions"
+			],
+			[
+				"comm",
+				"commentOptions"
+			],
+			[
+				"ac",
+				"account_id"
+			],
+			[
+				"acc",
+				"account_id"
+			],
+			[
+				"re",
+				"req"
+			],
+			[
+				"edi",
+				"editStickyText"
+			],
+			[
+				"acco",
+				"account_id"
+			],
+			[
+				"id",
+				"idMatches"
+			],
+			[
+				"is",
+				"isIn"
+			],
+			[
+				"ev",
+				"event"
+			],
+			[
+				"con",
+				"confirmElem"
+			],
+			[
+				"spec",
+				"space-evenly"
+			],
+			[
+				"jus",
+				"justify-content"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"que",
+				"querySelectorAll"
+			],
+			[
+				"inn",
+				"innerText"
+			],
+			[
+				"in",
+				"innerHTML"
+			],
+			[
+				"inv",
+				"inv_id"
+			],
+			[
+				"flex",
+				"flex-wrap"
+			],
+			[
+				"el",
+				"elem"
+			],
+			[
+				"just",
+				"justify-self"
+			],
+			[
+				"alig",
+				"align-self"
+			],
+			[
+				"fle",
+				"flex-direction"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"del",
+				"deleteCommentsResult"
+			],
+			[
+				"ACO",
+				"account_id"
+			],
+			[
+				"COMM",
+				"comment_id"
+			],
+			[
+				"sucess",
+				"successfully"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"up",
+				"updateResult"
+			],
+			[
+				"su",
+				"sucess"
+			],
+			[
+				"h",
+				"hidden"
+			],
+			[
+				"no",
+				"not-allowed"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"aler",
+				"alertElem"
+			],
+			[
+				"main",
+				"mainElem"
+			],
+			[
+				"add",
+				"appendChild"
+			],
+			[
+				"msg",
+				"msgElem"
+			],
+			[
+				"clas",
+				"classList"
+			],
+			[
+				"al",
+				"alertElem"
+			],
+			[
+				"form",
+				"formData"
+			],
+			[
+				"pre",
+				"preventDefault"
+			],
+			[
+				"che",
+				"checkout"
+			],
+			[
+				"it",
+				"items"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"chec",
+				"checkoutProcess"
+			],
+			[
+				"ca",
+				"cartItems"
+			],
+			[
+				"ad",
+				"addressUpdateFunction"
+			],
+			[
+				"shi",
+				"shipping"
+			],
+			[
+				"query",
+				"querySelectorAll"
+			],
+			[
+				"--",
+				"--dark-grey"
+			],
+			[
+				"marg-",
+				"margin-block"
+			],
+			[
+				"brod",
+				"border-radius"
+			],
+			[
+				"grid",
+				"grid-column"
+			],
+			[
+				"f",
+				"fieldset"
+			],
+			[
+				"cla",
+				"classList"
+			],
+			[
+				"cart",
+				"cartFooter"
+			],
+			[
+				"car",
+				"cartItems"
+			],
+			[
+				"hea",
+				"header"
+			],
+			[
+				"ar",
+				"argument2"
+			],
+			[
+				"a",
+				"argument2"
+			],
+			[
+				"til",
+				"tileSize"
+			],
+			[
+				"fo",
+				"for\tfor …"
+			],
+			[
+				"dm",
+				"dmgStrConstMatch"
+			],
+			[
+				"skil",
+				"skills"
+			],
+			[
+				"sw",
+				"switch\tswitch …"
+			],
+			[
+				"Abili",
+				"Abilities"
+			],
+			[
+				"Offen",
+				"Offensive"
+			],
+			[
+				"cus",
+				"customDmg"
+			],
+			[
+				"att",
+				"attack"
+			],
+			[
+				"at",
+				"atkDmg"
+			],
+			[
+				"sc",
+				"scores"
+			],
+			[
+				"iss",
+				"isset()"
+			],
+			[
+				"swi",
+				"switch\tswitch …"
+			],
+			[
+				"arr",
+				"arrays"
+			],
+			[
+				"Kadu",
+				"Kadurote"
+			],
+			[
+				"Sus",
+				"Suspraxes"
+			],
+			[
+				"Yar",
+				"Yarallians"
+			],
+			[
+				"Yr",
+				"Yarallians"
+			],
+			[
+				"Litho",
+				"Lithofirans"
+			],
+			[
+				"Rana",
+				"Ranavers"
+			],
+			[
+				"envi",
+				"environment"
+			],
+			[
+				"diff",
+				"difficult"
+			],
+			[
+				"emot",
+				"emotions"
+			],
+			[
+				"blo",
+				"blockSF"
+			],
+			[
+				"fore",
+				"foreach\tforeach …"
+			],
+			[
+				"ov",
+				"overflow-y\tproperty"
+			],
+			[
+				"te",
+				"text-align\tproperty"
+			],
+			[
+				"set",
+				"setupFuncs"
+			],
+			[
+				"he",
+				"headerCount"
+			],
+			[
+				"row",
+				"rowCount"
+			],
+			[
+				"ma",
+				"margin\tproperty"
+			],
+			[
+				"arm",
+				"armor_check"
+			],
+			[
+				"armo",
+				"armor_check"
+			],
+			[
+				"sub",
+				"subject"
+			],
+			[
+				"exp",
+				"explode"
+			],
+			[
+				"de",
+				"depth"
+			],
+			[
+				"tre",
+				"tree_indices"
+			],
+			[
+				"uns",
+				"unset"
+			],
+			[
+				"sort",
+				"sort_tree"
+			],
+			[
+				"col",
+				"color\tproperty"
+			],
+			[
+				"rgb",
+				"rgba()\tbackground-color"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"tran",
+				"transition\tproperty"
+			],
+			[
+				"lis",
+				"list-style-type\tproperty"
+			],
+			[
+				"min",
+				"min-height\tproperty"
+			],
+			[
+				"max",
+				"max-width\tproperty"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"cur",
+				"currentDirectory"
+			],
+			[
+				"fon",
+				"font-family\tproperty"
+			],
+			[
+				"pad",
+				"padding\tproperty"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"font",
+				"font-style\tproperty"
+			],
+			[
+				"border-s",
+				"border-style\tproperty"
+			],
+			[
+				"bor",
+				"border\tproperty"
+			],
+			[
+				"ex",
+				"extra"
+			],
+			[
+				"des",
+				"description"
+			],
+			[
+				"pri",
+				"price"
+			],
+			[
+				"tex",
+				"texts"
+			],
+			[
+				"mar",
+				"margin\tproperty"
+			],
+			[
+				"bac",
+				"background-color\tproperty"
+			],
+			[
+				"cal",
+				"CalculateHeightAndGradient"
+			],
+			[
+				"slo",
+				"slopes"
+			],
+			[
+				"ind",
+				"ind_offset"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/samanguiano/repos/wdd330-final-project",
+		"/Users/samanguiano/repos/wdd330-final-project/src",
+		"/Users/samanguiano/repos/wdd330-final-project/src/js"
+	],
+	"file_history":
+	[
+		"/Users/samanguiano/repos/wdd330-final-project/.sublime-project",
+		"/Users/samanguiano/repos/CSE340/public/js/script.js",
+		"/Users/samanguiano/repos/CSE340/public/css/styles.css",
+		"/Users/samanguiano/repos/CSE340/utilities/inventory-validation.js",
+		"/Users/samanguiano/repos/CSE340/routes/inventoryRoute.js",
+		"/Users/samanguiano/repos/CSE340/views/partials/header.ejs",
+		"/Users/samanguiano/repos/CSE340/utilities/index.js",
+		"/Users/samanguiano/repos/CSE340/controllers/invController.js",
+		"/Users/samanguiano/repos/CSE340/public/css/vehicle.css",
+		"/Users/samanguiano/repos/CSE340/views/inventory/vehicle.ejs",
+		"/Users/samanguiano/repos/CSE340/models/comment-model.js",
+		"/Users/samanguiano/repos/CSE340/utilities/account-validation.js",
+		"/Users/samanguiano/repos/CSE340/utilities/comments-validation.js",
+		"/Users/samanguiano/repos/CSE340/public/css/inventory.css",
+		"/Users/samanguiano/repos/CSE340/views/partials/head.ejs",
+		"/Users/samanguiano/repos/CSE340/routes/accountRoute.js",
+		"/Users/samanguiano/repos/CSE340/controllers/accountController.js",
+		"/Users/samanguiano/repos/CSE340/database/setup.psql",
+		"/Users/samanguiano/repos/CSE340/public/js/form.js",
+		"/Users/samanguiano/repos/CSE340/views/account/login.ejs",
+		"/Users/samanguiano/repos/CSE340/test_accounts.txt",
+		"/Users/samanguiano/repos/CSE340/views/account/update.ejs",
+		"/Users/samanguiano/repos/CSE340/models/account-model.js",
+		"/Users/samanguiano/repos/CSE340/public/css/home.css",
+		"/Users/samanguiano/repos/CSE340/views/index.ejs",
+		"/Users/samanguiano/repos/CSE340/views/inventory/edit-inventory.ejs",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/js/product.js",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/js/ProductDetails.mjs",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/css/style.css",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/js/utils.mjs",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/js/ExternalServices.mjs",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/js/CheckoutProcess.mjs",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/checkout/success.html",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/js/cart.js",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/js/ShoppingCart.mjs",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/js/main.js",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/js/checkout.js",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/checkout/index.html",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/cart/index.html",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/vite.config.js",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/js/Alert.mjs",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/public/partials/footer.html",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/public/partials/header.html",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/product_pages/index.html",
+		"/Users/samanguiano/repos/wdd3330-sleepoutside/src/index.html",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/flowerpots/data/flowerpots/bml/menu.bml",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Path Writer/datapacks/path_write/data/minecraft/tags/function/load.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Path Writer/datapacks/path_write/data/path_write/advancement/identify_use_2.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Path Writer/datapacks/path_write/data/path_write/advancement/identify_use.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Path Writer/datapacks/path_write/data/path_write/advancement/reset_paver_2.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Path Writer/datapacks/path_write/data/path_write/advancement/reset_paver.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Path Writer/datapacks/path_write/data/path_write/function/draw_circle.mcfunction",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Path Writer/datapacks/path_write/data/path_write/function/spawn_pavers_w_offset.mcfunction",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Path Writer/datapacks/path_write/data/path_write/function_macros/main.bml",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Path Writer/datapacks/path_write/data/path_write/function/generated/scale_node_if_1.mcfunction",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Path Writer/datapacks/path_write/data/path_write/function/reset_item.mcfunction",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Path Writer/datapacks/path_write/data/path_write/advancement/draw_nodes.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Path Writer/datapacks/path_write/data/path_write/advancement/clear_nodes.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/water_world.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/warm_caves.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/underwater_jungle.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/the_void.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/snowy_mountains.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/sand_pits.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/rose_forest.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/rootways.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/negative.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/mushroom_ocean.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/mushroom.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/mountainous_caves.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/kelp_forest.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/icy_mountainous_caves.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/icy_caves.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/grassy_caves.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/fungal_fields.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/frozen_water_caves.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/frozen_tundra.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/forested_mountainous_caves.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/forested_caves.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/fiery_mountainous_caves.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/fiery_caves.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/exotic_swamp.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/emerald.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/earthen_caves.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/dragon_caves.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/dark_fungal_fields.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/cavernous_forest.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/boiling_caves.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/barren_caverns.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/bamboo_forest.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/asiatic_jungle.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/worldgen/biome/asiatic_forest.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/dimension_type/underdark.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/dimension_type/rootways.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/dimension_type/rock_cave.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/dimension_type/negative.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/dimension_type/foggy.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/dimension_type/fey.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/dimension_type/water_cave.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/dimension_type/evil.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/dimension_type/dragon.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/dimension_type/blank.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/dimension_type/emerald.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/dimension_type/shadow.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/dimension_type/overworld_tall.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Resource Testing World/datapacks/amospian_planes/data/amospia/dimension_type/normal.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Soul Magic/datapacks/Throwable Fire Charges/data/fireball/advancement/wind_wand.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Soul Magic/datapacks/Throwable Fire Charges/data/fireball/loot_table/wind_wand.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Soul Magic/datapacks/Throwable Fire Charges/data/fireball/function_macros/fireball.bml",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Soul Magic/datapacks/soul/data/soul/function_macros/spell_utilities.bml",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Soul Magic/datapacks/soul/data/soul/function_macros/spell1.bml",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Soul Magic/datapacks/soul/data/soul/function_macros/main.bml",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Soul Magic/datapacks/soul/data/soul/function_macros/main_adv.bml",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Soul Magic/datapacks/Throwable Fire Charges/data/fireball/advancement/fire_wand.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Soul Magic/datapacks/Throwable Fire Charges/data/fireball/recipe/explosive_fire_charge.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Soul Magic/datapacks/Throwable Fire Charges/data/fireball/loot_table/fire_wand.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/saves/Soul Magic/datapacks/Throwable Fire Charges/data/fireball/function/fire_wand.mcfunction",
+		"/Users/samanguiano/Library/Application Support/minecraft/resourcepacks/resources/assets/minecraft/models/item/true_diamond_spear.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/resourcepacks/resources/assets/minecraft/items/true_diamond_spear.json",
+		"/Users/samanguiano/Library/Application Support/minecraft/resourcepacks/resources/assets/minecraft/items/diamond_spear.json",
+		"/Users/samanguiano/repos/MCserver-site/old/pageStart.php",
+		"/Users/samanguiano/repos/MCserver-site/page_setup.php",
+		"/Users/samanguiano/repos/MCserver-site/page_start.php",
+		"/Users/samanguiano/repos/MCserver-site/page_end.php",
+		"/Users/samanguiano/repos/MCserver-site/index.php",
+		"/Users/samanguiano/repos/MCserver-site/styles/page_end.php",
+		"/Users/samanguiano/repos/MCserver-site/styles/page_start.php",
+		"/Users/samanguiano/repos/MCserver-site/styles/index.php"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 108.0,
+		"history":
+		[
+		]
+	},
+	"output.find_results":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"pinned_build_system": "",
+	"project": "wdd330-final.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 276.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

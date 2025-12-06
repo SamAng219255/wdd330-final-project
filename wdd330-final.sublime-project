@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"build_systems": [
+		{
+			"name": "Lint",
+			"shell_cmd": "pnpm run lint",
+			"file_patterns": ["*.js", "*.mjs"]
+		},
+		{
+			"name": "Format",
+			"shell_cmd": "pnpm run format",
+			"file_patterns": ["*.css", "*.html", "*.json"]
+		}
+	]
+}

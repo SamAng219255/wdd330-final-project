@@ -1,97 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Anime List | WDD330</title>
-	<link rel="stylesheet" type="text/css" href="/css/style.css">
-</head>
-<body>
-	<main>
-		<h1>WDD 330 Final Project Proposal</h1>
-		<section>
-			<h2>Description</h2>
-			<dl>
-				<dt>Overview</dt>
-				<dd>This website will be a quick and easy tool to look through upcoming anime titles, sorting by various parameters including show information and the presence or absence of user tags (probably a "star", "watching", and "dislike").</dd>
-				<dt>Target Audience</dt>
-				<dd>The target audience is regular anime watchers who are not "hardcore" enough to be easily on top of what's coming up and just want to keep up with what's available.</dd>
-				<dt>Major Functions</dt>
-				<dd>Major functions include listing anime titles by season, listing anime titles by ranking, sorting listed titles, marking titles with tags, and displaying additional details about the selected title.</dd>
-				<dt>External Data</dt>
-				<dd>I am using the myanimelist "Get seasonal anime" and "Get anime ranking" api endpoints.</dd>
-				<dt>Module List</dt>
-				<dd>
-					<ul>
-						<li>AnimeList: Fetches and contains a list of anime titles.</li>
-						<li>Filter: Stores and manages filter settings.</li>
-						<li>AnimeDetails: Stores and displays the details of an anime in a modal.</li>
-					</ul>
-				</dd>
-				<dt>Graphic Identity</dt>
-				<dd>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Anime List | WDD330</title>
+		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>WDD 330 Final Project Proposal</h1>
+		</header>
+		<main>
+			<div id="main-wrapper">
+				<section>
+					<h2>Description</h2>
 					<dl>
-						<dt>Color Scheme</dt>
+						<dt>Overview</dt>
+						<dd>
+							This website will be a quick and easy tool to look through
+							upcoming anime titles, sorting by various parameters including
+							show information and the presence or absence of user tags
+							(probably a "star", "watching", and "dislike").
+						</dd>
+						<dt>Target Audience</dt>
+						<dd>
+							The target audience is regular anime watchers who are not
+							"hardcore" enough to be easily on top of what's coming up and just
+							want to keep up with what's available.
+						</dd>
+						<dt>Major Functions</dt>
+						<dd>
+							Major functions include listing anime titles by season, listing
+							anime titles by ranking, sorting listed titles, marking titles
+							with tags, and displaying additional details about the selected
+							title.
+						</dd>
+						<dt>External Data</dt>
+						<dd>
+							I am using the myanimelist "Get seasonal anime" and "Get anime
+							ranking" api endpoints.
+						</dd>
+						<dt>Module List</dt>
 						<dd>
 							<ul>
+								<li>AnimeList: Fetches and contains a list of anime titles.</li>
+								<li>Filter: Stores and manages filter settings.</li>
 								<li>
-									Primary Color (Main element backgrounds): 
-									<div class="swatch swatch-primary">Aa</div>
-								</li>
-								<li>
-									Secondary Color (Accent element backgrounds): 
-									<div class="swatch swatch-secondary">Aa</div>
-								</li>
-								<li>
-									Backdrop Color (body color): 
-									<div class="swatch swatch-background"></div>
+									AnimeDetails: Stores and displays the details of an anime in a
+									modal.
 								</li>
 							</ul>
 						</dd>
-						<dt>Typography</dt>
-						<dd>Using common neutral fonts. Helvetica first, followed by Arial as a backup.</dd>
-						<dt>Miscellanea</dt>
-						<dd>Rounded corners on elements.</dd>
+						<dt>Graphic Identity</dt>
+						<dd>
+							<dl>
+								<dt>Color Scheme</dt>
+								<dd>
+									<ul>
+										<li>
+											Primary Color (Main element backgrounds):
+											<div class="swatch swatch-primary">Aa</div>
+										</li>
+										<li>
+											Secondary Color (Accent element backgrounds):
+											<div class="swatch swatch-secondary">Aa</div>
+										</li>
+										<li>
+											Backdrop Color (body color):
+											<div class="swatch swatch-background"></div>
+										</li>
+									</ul>
+								</dd>
+								<dt>Typography</dt>
+								<dd>
+									Using common neutral fonts. Helvetica first, followed by Arial
+									as a backup.
+								</dd>
+								<dt>Miscellanea</dt>
+								<dd>Rounded corners on elements.</dd>
+							</dl>
+						</dd>
+						<dt>Timeline</dt>
+						<dd>
+							<table>
+								<thead>
+									<tr>
+										<th>Week</th>
+										<th>Key Tasks</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>5</td>
+										<td>
+											Idea, Initial Planning, Proposal (too late now to get much
+											else)
+										</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>API Call, Display Lists, Sorting</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>Display Modal, Implement User Tags</td>
+									</tr>
+								</tbody>
+							</table>
+						</dd>
+						<dt>Challenges</dt>
+						<dd>
+							Honestly, the biggest challenge was always going to deciding what
+							to make, I'm not very good at that. I am quite good at code though
+							and my knowledge extends well beyond the scope of this course, and
+							the vast majority of the theory and patterns mentioned in this
+							course I was already using in my websites, including using
+							external APIs. In the end, I could only manage to come up with a
+							design for something simple so I don't expect any major
+							difficulty.
+						</dd>
 					</dl>
-				</dd>
-				<dt>Timeline</dt>
-				<dd>
-					<table>
-						<thead>
-							<tr>
-								<th>Week</th>
-								<th>Key Tasks</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>5</td>
-								<td>Idea, Initial Planning, Proposal (too late now to get much else)</td>
-							</tr>
-							<tr>
-								<td>6</td>
-								<td>API Call, Display Lists, Sorting</td>
-							</tr>
-							<tr>
-								<td>7</td>
-								<td>Display Modal, Implement User Tags</td>
-							</tr>
-						</tbody>
-					</table>
-				</dd>
-				<dt>Challenges</dt>
-				<dd>Honestly, the biggest challenge was always going to deciding what to make, I'm not very good at that. I am quite good at code though and my knowledge extends well beyond the scope of this course, and the vast majority of the theory and patterns mentioned in this course I was already using in my websites, including using external APIs. In the end, I could only manage to come up with a design for something simple so I don't expect any major difficulty.</dd>
-			</dl>
-		</section>
-		<section>
-			<h2>Project Planning</h2>
-			<p><a href="https://trello.com/b/66us3g5G" target="_blank">Trello Board</a></p>
-		</section>
-		<section>
-			<h2>Wire Frames</h2>
-			<img src="/images/wireframe-mobile.jpg" width="264" height="570" alt="Wireframe of the Primary Mobile View">
-			<img src="/images/wireframe-desktop.jpg" width="800" height="449" alt="Wireframe of the Primary Desktop View">
-		</section>
-	</main>
-</body>
+				</section>
+				<section>
+					<h2>Project Planning</h2>
+					<p>
+						<a href="https://trello.com/b/66us3g5G" target="_blank"
+							>Trello Board</a
+						>
+					</p>
+				</section>
+				<section>
+					<h2>Wire Frames</h2>
+					<img
+						src="/images/wireframe-mobile.jpg"
+						width="264"
+						height="570"
+						alt="Wireframe of the Primary Mobile View"
+					/>
+					<img
+						src="/images/wireframe-desktop.jpg"
+						width="800"
+						height="449"
+						alt="Wireframe of the Primary Desktop View"
+					/>
+				</section>
+			</div>
+		</main>
+	</body>
 </html>

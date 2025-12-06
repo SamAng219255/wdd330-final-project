@@ -1,34 +1,41 @@
 {
-  "name": "wdd330-final-project",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "start": "vite",
-    "build": "vite build --emptyOutDir",
-    "lint": "eslint *.js src/**/*.{mjs,js}",
-    "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,mjs,js,ts,css}\"",
-    "test": "jest",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "eslint": "^9.39.1",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-import": "^2.32.0",
-    "jest": "^30.2.0",
-    "prettier": "^3.7.2",
-    "vite": "^7.2.4"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
-  },
-  "browserslist": [
-    "last 3 and_chr versions",
-    "last 3 chrome versions",
-    "last 3 opera versions",
-    "last 3 ios_saf versions",
-    "last 3 safari versions"
-  ]
+	"name": "wdd330-final-project",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"start": "vite",
+		"build": "vite build --emptyOutDir",
+		"lint": "eslint --fix *.{mjs,js} src/**/*.{mjs,js}",
+		"format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,css}\"",
+		"test": "jest",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"@eslint/compat": "^2.0.0",
+		"@eslint/eslintrc": "^3.3.3",
+		"@eslint/js": "^9.39.1",
+		"eslint": "^9.39.1",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-import": "^2.32.0",
+		"globals": "^16.5.0",
+		"jest": "^30.2.0",
+		"prettier": "^3.7.2",
+		"vite": "^7.2.4"
+	},
+	"babel": {
+		"presets": [
+			"@babel/preset-env"
+		]
+	},
+	"browserslist": [
+		"last 3 and_chr versions",
+		"last 3 chrome versions",
+		"last 3 opera versions",
+		"last 3 ios_saf versions",
+		"last 3 safari versions"
+	],
+	"dependencies": {
+		"@stylistic/eslint-plugin": "^5.6.1"
+	}
 }
