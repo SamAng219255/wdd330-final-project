@@ -1,6 +1,6 @@
 import AnimeList from "./AnimeList.mjs";
-const seasonalURL = import.meta.env.VITE_SEASONAL_API_URL;
-const rankedURL = import.meta.env.VITE_RANKED_API_URL;
+const seasonalURL = '/mal/anime/season';
+const rankedURL = '/mal/anime/ranked';
 
 const fields = [
 	"id",
