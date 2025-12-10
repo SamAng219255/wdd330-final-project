@@ -28,7 +28,6 @@ export default defineConfig(({ mode }) => {
 				input: {
 					proposal: resolve(__dirname, "src/proposal.html"),
 					home: resolve(__dirname, "src/index.html"),
-					test: resolve(__dirname, "src/drag-test-do-not-include.html"),
 				},
 			},
 		},

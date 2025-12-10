@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en-US">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Anime List | WDD330</title>
-		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
 		<script type="module" src="/js/main.js"></script>
 	</head>
 	<body>
@@ -18,36 +18,36 @@
 					<button id="show-filters">&blacktriangleright; Show</button>
 					<div id="filters">
 						<div id="view-options">
-							<select id="view-select">
-								<option value="seasonal">Season</option>
+							<select id="view-select" class="update-trigger">
+								<option value="season">Season</option>
 								<option value="ranking">Ranking</option>
 							</select>
-							<select id="season-options" class="show">
-								<option value="2026/winter">2026 — Winter</option>
-								<option value="2025/fall">2025 — Fall</option>
-								<option value="2025/summer">2025 — Summer</option>
-								<option value="2025/spring">2025 — Spring</option>
-								<option value="2025/winter">2025 — Winter</option>
-								<option value="2024/fall">2024 — Fall</option>
-								<option value="2024/summer">2024 — Summer</option>
-								<option value="2024/spring">2024 — Spring</option>
-								<option value="2024/winter">2024 — Winter</option>
-								<option value="2023/fall">2023 — Fall</option>
-								<option value="2023/summer">2023 — Summer</option>
-								<option value="2023/spring">2023 — Spring</option>
-								<option value="2023/winter">2023 — Winter</option>
-								<option value="2022/fall">2022 — Fall</option>
-								<option value="2022/summer">2022 — Summer</option>
-								<option value="2022/spring">2022 — Spring</option>
-								<option value="2022/winter">2022 — Winter</option>
-								<option value="2021/fall">2021 — Fall</option>
-								<option value="2021/summer">2021 — Summer</option>
-								<option value="2021/spring">2021 — Spring</option>
-								<option value="2021/winter">2021 — Winter</option>
-								<option value="2020/fall">2020 — Fall</option>
-								<option value="2020/summer">2020 — Summer</option>
-								<option value="2020/spring">2020 — Spring</option>
-								<option value="2020/winter">2020 — Winter</option>
+							<select id="season-options" class="update-trigger show">
+								<option value="/2026/winter">2026 — Winter</option>
+								<option value="/2025/fall">2025 — Fall</option>
+								<option value="/2025/summer">2025 — Summer</option>
+								<option value="/2025/spring">2025 — Spring</option>
+								<option value="/2025/winter">2025 — Winter</option>
+								<option value="/2024/fall">2024 — Fall</option>
+								<option value="/2024/summer">2024 — Summer</option>
+								<option value="/2024/spring">2024 — Spring</option>
+								<option value="/2024/winter">2024 — Winter</option>
+								<option value="/2023/fall">2023 — Fall</option>
+								<option value="/2023/summer">2023 — Summer</option>
+								<option value="/2023/spring">2023 — Spring</option>
+								<option value="/2023/winter">2023 — Winter</option>
+								<option value="/2022/fall">2022 — Fall</option>
+								<option value="/2022/summer">2022 — Summer</option>
+								<option value="/2022/spring">2022 — Spring</option>
+								<option value="/2022/winter">2022 — Winter</option>
+								<option value="/2021/fall">2021 — Fall</option>
+								<option value="/2021/summer">2021 — Summer</option>
+								<option value="/2021/spring">2021 — Spring</option>
+								<option value="/2021/winter">2021 — Winter</option>
+								<option value="/2020/fall">2020 — Fall</option>
+								<option value="/2020/summer">2020 — Summer</option>
+								<option value="/2020/spring">2020 — Spring</option>
+								<option value="/2020/winter">2020 — Winter</option>
 							</select>
 						</div>
 						<div id="filter-options">
@@ -62,37 +62,27 @@
 							</div>
 							<label>
 								Title
-								<input type="text" id="filter-title" />
+								<input type="text" id="filter-title" class="update-trigger">
 							</label>
 							<label>
 								Synopsis
-								<input type="text" id="filter-synopsis" />
+								<input type="text" id="filter-synopsis" class="update-trigger">
 							</label>
 							<div class="label">
 								Score
 								<div>
-									<input
-										type="number"
-										id="filter-score-min"
-										aria-label="Minimum Score from 0 to 10"
-										placeholder="0"
-									/>
+									<input type="number" id="filter-score-min" class="update-trigger" aria-label="Minimum Score from 0 to 10" placeholder="0">
 									–
-									<input
-										type="number"
-										id="filter-score-max"
-										aria-label="Maximum Score from 0 to 10"
-										placeholder="10"
-									/>
+									<input type="number" id="filter-score-max" class="update-trigger" aria-label="Maximum Score from 0 to 10" placeholder="10">
 								</div>
 							</div>
 							<label>
 								Genre
-								<input type="text" id="filter-genre" />
+								<input type="text" id="filter-genre" class="update-trigger">
 							</label>
 							<label>
 								Studio
-								<input type="text" id="filter-studio" />
+								<input type="text" id="filter-studio" class="update-trigger">
 							</label>
 							<div class="label checkboxes">
 								Rating
@@ -101,7 +91,7 @@
 										<input
 											type="checkbox"
 											data-value="g"
-											class="filter-rating"
+											class="filter-rating update-trigger"
 										/>
 										<span>G</span>
 									</label>
@@ -109,7 +99,7 @@
 										<input
 											type="checkbox"
 											data-value="pg"
-											class="filter-rating"
+											class="filter-rating update-trigger"
 										/>
 										<span>PG</span>
 									</label>
@@ -117,7 +107,7 @@
 										<input
 											type="checkbox"
 											data-value="pg_13"
-											class="filter-rating"
+											class="filter-rating update-trigger"
 										/>
 										<span>PG-13</span>
 									</label>
@@ -125,7 +115,7 @@
 										<input
 											type="checkbox"
 											data-value="r"
-											class="filter-rating"
+											class="filter-rating update-trigger"
 										/>
 										<span>R</span>
 									</label>
@@ -133,7 +123,7 @@
 										<input
 											type="checkbox"
 											data-value="r+"
-											class="filter-rating"
+											class="filter-rating update-trigger"
 										/>
 										<span>R+</span>
 									</label>
@@ -141,7 +131,7 @@
 										<input
 											type="checkbox"
 											data-value="null"
-											class="filter-rating"
+											class="filter-rating update-trigger"
 										/>
 										<span>Not Listed</span>
 									</label>
@@ -160,17 +150,18 @@
 				</section>
 				<section>
 					<h2>Shows</h2>
+					<p class="hint">Click a show's title or art to see additional details.</p>
 					<div id="anime-list"></div>
 				</section>
 				<template id="anime-template">
 					<div class="card">
-						<img class="anime-img" />
+						<img class="anime-img">
 						<div>
 							<h3 class="anime-title"></h3>
 							<p class="anime-title-en"></p>
 							<p>Studio: <span class="anime-studio"></span></p>
 							<p>
-								<b>Description</b><br /><span class="anime-description"></span>
+								<b>Description</b><br><span class="anime-description"></span>
 							</p>
 							<div class="fade-out">
 								<button class="anime-show-more">Show More</button>
@@ -181,23 +172,9 @@
 			</div>
 		</main>
 		<footer>
-			<p>
-				<b>
-					Powered by the
-					<a href="https://myanimelist.net/clubs.php?cid=13727" target="_blank">
-						Official MyAnimeList API
-					</a>
-					.
-				</b>
-			</p>
-			<p>
-				This project is not affiliated with or endorsed by MyAnimeList in any
-				way.
-			</p>
-			<p>
-				User-placed tags are recorded in locally in your browser and never sent
-				to any server.
-			</p>
+			<p><b>Powered by the <a href="https://myanimelist.net/clubs.php?cid=13727" target="_blank">Official MyAnimeList API</a>.</b></p>
+			<p>This project is not affiliated with or endorsed by MyAnimeList in any way.</p>
+			<p>User-placed tags are recorded in locally in your browser and never sent to any server.</p>
 			<p>No personal data is collected or stored.</p>
 		</footer>
 	</body>

@@ -7,7 +7,7 @@
 		"start": "vite",
 		"build": "vite build --emptyOutDir",
 		"lint": "eslint --fix *.{mjs,js} src/**/*.{mjs,js}",
-		"format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,css}\"",
+		"format": "prettier --ignore-path ./.gitignore --write \"./**/*.{json,css}\"",
 		"test": "jest",
 		"preview": "vite preview"
 	},

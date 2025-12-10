@@ -16,10 +16,11 @@ async function convertToJson(res) {
 }
 
 export default class AnimeList {
-	constructor(target_url, parameters, filters = []) {
+	constructor(target_url, parameters, deep_filter) {
 		this.target_url = target_url;
 		this.parameters = parameters;
-		this.filters = Array.isArray(filters) ? filters : [ filters ];
+		this.deep_filter = deep_filter;
+		this.filters = [];
 	}
 
 	#data_arr;
@@ -30,7 +31,7 @@ export default class AnimeList {
 
 	static cache = [];
 
-	async fetch(callback, deep_filter) {
+	async fetch(callback) {
 		if(this.#data !== undefined) {
 			throw Error("Data already fetched.");
 		}
@@ -38,7 +39,7 @@ export default class AnimeList {
 		const cacheSearchRes = AnimeList.cache.find(list => this.equals(list));
 
 		if(cacheSearchRes) {
-			this.#data = deep_filter ? deep_filter.execute(cacheSearchRes.data) : cacheSearchRes.data;
+			this.#data = cacheSearchRes.data;
 
 			if(callback) {
 				try {
@@ -54,7 +55,7 @@ export default class AnimeList {
 			try {
 				const apiRes = await fetch(`${this.target_url}?${params}`);
 				const apiData = await convertToJson(apiRes);
-				this.#data = deep_filter ? deep_filter.execute(apiData.data) : apiData.data;
+				this.#data = this.deep_filter ? this.deep_filter.execute(apiData.data) : apiData.data;
 				AnimeList.cache.push(this);
 			}
 			catch(err) {
@@ -129,6 +130,10 @@ export default class AnimeList {
 		return this.#filtered_data;
 	}
 
+	get dataSet() {
+		return this.#filtered_data !== undefined;
+	}
+
 	get data_full() {
 		if(this.#data === undefined) {
 			throw Error("Data not yet fetched.");
@@ -168,7 +173,8 @@ export default class AnimeList {
 				) &&
 				Object.entries(list2.parameters).every(
 					([ key, val ]) => list1.parameters[key] == val,
-				)
+				) &&
+				list1.deep_filter === list2.deep_filter
 			);
 		}
 		else {

@@ -1,5 +1,8 @@
 function depthGet(obj, key) {
-	if(key.includes(".")) {
+	if(!key) {
+		return obj;
+	}
+	else if(key.includes(".")) {
 		return key.split(".").reduce((curObj, keyPart) => curObj?.[keyPart], obj);
 	}
 	else {
@@ -56,7 +59,10 @@ makePattern(
 		this.value = value;
 	},
 	function(entry) {
-		return depthGet(entry, this.key) === this.value;
+		if(typeof this.value == "string")
+			return depthGet(entry, this.key)?.toLowerCase() === this.value.toLowerCase();
+		else
+			return depthGet(entry, this.key) === this.value;
 	},
 );
 makePattern(
@@ -66,7 +72,10 @@ makePattern(
 		this.values = values;
 	},
 	function(entry) {
-		return this.values.indexOf(depthGet(entry, this.key)) > -1;
+			const value = depthGet(entry, this.key);
+			return this.values
+				.map(value_item => value_item?.toLowerCase ? value_item.toLowerCase() : value_item)
+				.indexOf(value?.toLowerCase ? value.toLowerCase() : value) > -1;
 	},
 );
 makePattern(
@@ -94,7 +103,7 @@ makePattern(
 		this.patterns = patterns.map(pattern => pattern instanceof Pattern ? pattern : new Pattern(pattern));
 	},
 	function(entry) {
-		return this.patterns.some(pattern => pattern.execute(entry));
+		return !this.patterns || this.patterns.some(pattern => pattern.execute(entry));
 	},
 );
 makePattern(
@@ -103,7 +112,7 @@ makePattern(
 		this.patterns = patterns.map(pattern => pattern instanceof Pattern ? pattern : new Pattern(pattern));
 	},
 	function(entry) {
-		return this.patterns.every(pattern => pattern.execute(entry));
+		return !this.patterns || this.patterns.every(pattern => pattern.execute(entry));
 	},
 );
 makePattern(
@@ -141,6 +150,32 @@ makePattern(
 		return this.checks.every(check => check(value));
 	},
 );
+makePattern(
+	"includes",
+	function({ key, substring }) {
+		this.key = key;
+		this.substring = substring;
+	},
+	function(entry) {
+		const value = depthGet(entry, this.key);
+		return value?.includes && value.toLowerCase().includes(this.substring.toLowerCase());
+	},
+);
+makePattern(
+	"includes_any",
+	function({ key, substrings }) {
+		this.key = key;
+		this.substrings = substrings;
+	},
+	function(entry) {
+		const value = depthGet(entry, this.key);
+		if(value)
+			return !this.substrings || this.substrings
+				.some(substring => value.includes && value.toLowerCase().includes(substring.toLowerCase()));
+		else
+			return false;
+	},
+);
 
 export default class Filter {
 	constructor(option1, option2) {
@@ -172,7 +207,7 @@ export default class Filter {
 		}
 	}
 
-	#compare = (entry1, entry2) => {
+	#compare = function (entry1, entry2) {
 		let priority = 1 << this.sortOrder.length;
 		return this.sortOrder.reduce((ret, [ col, dir ]) => ret + ((priority >>= 1) * (dir == "desc" ? -1 : +1) * compare(depthGet(entry1, col), depthGet(entry2, col))), 0);
 	};
