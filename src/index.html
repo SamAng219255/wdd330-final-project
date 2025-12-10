@@ -14,16 +14,164 @@
 		<main>
 			<div id="main-wrapper">
 				<section>
-					
+					<h2>Filter and Sort</h2>
+					<button id="show-filters">&blacktriangleright; Show</button>
+					<div id="filters">
+						<div id="view-options">
+							<select id="view-select">
+								<option value="seasonal">Season</option>
+								<option value="ranking">Ranking</option>
+							</select>
+							<select id="season-options" class="show">
+								<option value="2026/winter">2026 — Winter</option>
+								<option value="2025/fall">2025 — Fall</option>
+								<option value="2025/summer">2025 — Summer</option>
+								<option value="2025/spring">2025 — Spring</option>
+								<option value="2025/winter">2025 — Winter</option>
+								<option value="2024/fall">2024 — Fall</option>
+								<option value="2024/summer">2024 — Summer</option>
+								<option value="2024/spring">2024 — Spring</option>
+								<option value="2024/winter">2024 — Winter</option>
+								<option value="2023/fall">2023 — Fall</option>
+								<option value="2023/summer">2023 — Summer</option>
+								<option value="2023/spring">2023 — Spring</option>
+								<option value="2023/winter">2023 — Winter</option>
+								<option value="2022/fall">2022 — Fall</option>
+								<option value="2022/summer">2022 — Summer</option>
+								<option value="2022/spring">2022 — Spring</option>
+								<option value="2022/winter">2022 — Winter</option>
+								<option value="2021/fall">2021 — Fall</option>
+								<option value="2021/summer">2021 — Summer</option>
+								<option value="2021/spring">2021 — Spring</option>
+								<option value="2021/winter">2021 — Winter</option>
+								<option value="2020/fall">2020 — Fall</option>
+								<option value="2020/summer">2020 — Summer</option>
+								<option value="2020/spring">2020 — Spring</option>
+								<option value="2020/winter">2020 — Winter</option>
+							</select>
+						</div>
+						<div id="filter-options">
+							<div id="filter-header">
+								<h3>Filter</h3>
+								<p class="hint">
+									You can use quotes ("") to match whole words or phrases as
+									well as using OR to match either word or phrase. You can even
+									combine several ORs in a row ("a" OR "b" OR "c") to match any
+									of the words.
+								</p>
+							</div>
+							<label>
+								Title
+								<input type="text" id="filter-title" />
+							</label>
+							<label>
+								Synopsis
+								<input type="text" id="filter-synopsis" />
+							</label>
+							<div class="label">
+								Score
+								<div>
+									<input
+										type="number"
+										id="filter-score-min"
+										aria-label="Minimum Score from 0 to 10"
+										placeholder="0"
+									/>
+									–
+									<input
+										type="number"
+										id="filter-score-max"
+										aria-label="Maximum Score from 0 to 10"
+										placeholder="10"
+									/>
+								</div>
+							</div>
+							<label>
+								Genre
+								<input type="text" id="filter-genre" />
+							</label>
+							<label>
+								Studio
+								<input type="text" id="filter-studio" />
+							</label>
+							<div class="label checkboxes">
+								Rating
+								<div>
+									<label>
+										<input
+											type="checkbox"
+											data-value="g"
+											class="filter-rating"
+										/>
+										<span>G</span>
+									</label>
+									<label>
+										<input
+											type="checkbox"
+											data-value="pg"
+											class="filter-rating"
+										/>
+										<span>PG</span>
+									</label>
+									<label>
+										<input
+											type="checkbox"
+											data-value="pg_13"
+											class="filter-rating"
+										/>
+										<span>PG-13</span>
+									</label>
+									<label>
+										<input
+											type="checkbox"
+											data-value="r"
+											class="filter-rating"
+										/>
+										<span>R</span>
+									</label>
+									<label>
+										<input
+											type="checkbox"
+											data-value="r+"
+											class="filter-rating"
+										/>
+										<span>R+</span>
+									</label>
+									<label>
+										<input
+											type="checkbox"
+											data-value="null"
+											class="filter-rating"
+										/>
+										<span>Not Listed</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div id="sort-options">
+							<h3>Sort</h3>
+							<div id="sort-container"></div>
+							<div id="add-sort-holder">
+								<button id="add-sort">Add Sort Column</button>
+								<div id="add-sort-menu"><div></div></div>
+							</div>
+						</div>
+					</div>
 				</section>
-				<section id="anime-list"></section>
+				<section>
+					<h2>Shows</h2>
+					<div id="anime-list"></div>
+				</section>
 				<template id="anime-template">
 					<div class="card">
-						<img class="anime-img">
+						<img class="anime-img" />
 						<div>
-							<p class="anime-title"></p>
+							<h3 class="anime-title"></h3>
+							<p class="anime-title-en"></p>
 							<p>Studio: <span class="anime-studio"></span></p>
-							<p><b>Description</b><br><span class="anime-description"></span></p>
+							<p>
+								<b>Description</b><br /><span class="anime-description"></span>
+							</p>
 							<div class="fade-out">
 								<button class="anime-show-more">Show More</button>
 							</div>
@@ -34,7 +182,13 @@
 		</main>
 		<footer>
 			<p>
-				<b>Powered by the <a href="https://myanimelist.net/clubs.php?cid=13727" target="_blank">Official MyAnimeList API</a>.</b>
+				<b>
+					Powered by the
+					<a href="https://myanimelist.net/clubs.php?cid=13727" target="_blank">
+						Official MyAnimeList API
+					</a>
+					.
+				</b>
 			</p>
 			<p>
 				This project is not affiliated with or endorsed by MyAnimeList in any
