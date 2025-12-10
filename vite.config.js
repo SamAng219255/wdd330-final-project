@@ -1,8 +1,8 @@
 import { resolve } from "path";
 import { defineConfig, loadEnv } from "vite";
 
-export default defineConfig(({mode}) => {
-	const env = loadEnv(mode, process.cwd(), '');
+export default defineConfig(({ mode }) => {
+	const env = loadEnv(mode, process.cwd(), "");
 
 	return {
 		root: "src/",
@@ -13,13 +13,13 @@ export default defineConfig(({mode}) => {
 					target: "https://api.myanimelist.net/v2",
 					changeOrigin: true,
 					rewrite: path => path.replace(/^\/mal/, ""),
-					configure: (proxy) => {
-						proxy.on("proxyReq", (proxyReq) => {
+					configure: proxy => {
+						proxy.on("proxyReq", proxyReq => {
 							proxyReq.setHeader("X-MAL-CLIENT-ID", env.MAL_CLIENT_ID);
 						});
-					}
-				}
-			}
+					},
+				},
+			},
 		},
 
 		build: {
@@ -31,4 +31,5 @@ export default defineConfig(({mode}) => {
 				},
 			},
 		},
-}});
+	};
+});

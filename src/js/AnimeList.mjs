@@ -16,12 +16,18 @@ async function convertToJson(res) {
 }
 
 export default class AnimeList {
-	constructor(target_url, parameters) {
+	constructor(target_url, parameters, deep_filter) {
 		this.target_url = target_url;
 		this.parameters = parameters;
+		this.deep_filter = deep_filter;
+		this.filters = [];
 	}
 
-	#data;
+	#data_arr;
+
+	#filtered_data;
+
+	#filters = [];
 
 	static cache = [];
 
@@ -33,28 +39,41 @@ export default class AnimeList {
 		const cacheSearchRes = AnimeList.cache.find(list => this.equals(list));
 
 		if(cacheSearchRes) {
-			if(callback) callback();
 			this.#data = cacheSearchRes.data;
 
-			if(callback) return callback(this.data);
-			else return this.data;
+			if(callback) {
+				try {
+					callback(this);
+				}
+				catch(err) {
+					console.error(err);
+				}
+			}
 		}
 		else {
 			const params = new URLSearchParams(this.parameters);
 			try {
 				const apiRes = await fetch(`${this.target_url}?${params}`);
 				const apiData = await convertToJson(apiRes);
-				this.#data = apiData.data;
+				this.#data = this.deep_filter ? this.deep_filter.execute(apiData.data) : apiData.data;
 				AnimeList.cache.push(this);
-
-				if(callback) return callback(this.data);
-				else return this.data;
 			}
 			catch(err) {
 				console.error(
 					`Error fetching ${this.target_url} with parameters ${JSON.stringify(this.parameters)}`,
 					err,
 				);
+				return;
+			}
+			finally {
+				if(callback) {
+					try {
+						callback(this);
+					}
+					catch(err) {
+						console.error(err);
+					}
+				}
 			}
 		}
 	}
@@ -75,6 +94,15 @@ export default class AnimeList {
 			const titleElem = fragment.querySelector(".anime-title");
 			titleElem.innerText = entry.title;
 
+			if(entry.alternative_titles?.en) {
+				const titleEnElem = fragment.querySelector(".anime-title-en");
+				titleEnElem.innerText = entry.alternative_titles.en;
+			}
+			else if(entry.alternative_titles?.synonyms?.length) {
+				const titleEnElem = fragment.querySelector(".anime-title-en");
+				titleEnElem.innerText = entry.alternative_titles.synonyms[0];
+			}
+
 			const studioElem = fragment.querySelector(".anime-studio");
 			studioElem.innerText = entry.studios.map(studio => studio.name).join(", ");
 
@@ -85,12 +113,52 @@ export default class AnimeList {
 		});
 	}
 
+	add_filter(filter) {
+		this.#filters.push(filter);
+
+		if(this.#data !== undefined)
+			this.#filtered_data = filter.execute(this.data);
+
+		return this.data;
+	}
+
 	get data() {
+		if(this.#filtered_data === undefined) {
+			throw Error("Data not yet fetched.");
+		}
+
+		return this.#filtered_data;
+	}
+
+	get dataSet() {
+		return this.#filtered_data !== undefined;
+	}
+
+	get data_full() {
 		if(this.#data === undefined) {
 			throw Error("Data not yet fetched.");
 		}
 
 		return this.#data;
+	}
+
+	get #data() {
+		return this.#data_arr;
+	}
+
+	set #data(new_val) {
+		this.#data_arr = new_val;
+		this.#filtered_data = this.filters.reduce((data, filter) => filter.execute(data), this.data_full);
+	}
+
+	get filters() {
+		return this.#filters;
+	}
+
+	set filters(new_vals) {
+		this.#filters = new_vals;
+		if(this.#data !== undefined)
+			this.#filtered_data = this.filters.reduce((data, filter) => filter.execute(data), this.data_full);
 	}
 
 	equals(list2) {
@@ -105,7 +173,8 @@ export default class AnimeList {
 				) &&
 				Object.entries(list2.parameters).every(
 					([ key, val ]) => list1.parameters[key] == val,
-				)
+				) &&
+				list1.deep_filter === list2.deep_filter
 			);
 		}
 		else {
