@@ -1,5 +1,9 @@
-const getDragHandler = (dragged, clsInst) => e => {
+const getDragHandler = (dragged, fakeElem, clsInst) => e => {
 	e.preventDefault();
+
+	fakeElem.style.top = `${e.pageY}px`;
+	fakeElem.style.left = `${e.pageX}px`;
+
 	const { clientX, clientY } = e;
 	const tiles = [ ...clsInst.container.children ];
 	const firstRect = tiles[0].getBoundingClientRect();
@@ -78,16 +82,31 @@ export default class DragTiles {
 			if(dragged === this.container)
 				return;
 			const containerChildren = [ ...container.children ];
-			while(containerChildren.indexOf(dragged) < 0) {
+			/*while(containerChildren.indexOf(dragged) < 0) {
 				dragged = dragged.parentElement;
-			}
+			}*/
+			if(containerChildren.indexOf(dragged) < 0)
+				return;
 			dragDir = 0;
 			passedElements = [];
-			const dragHandler = getDragHandler(e.target, this);
+
+			const fakeElem = dragged.cloneNode(true);
+			document.body.append(fakeElem);
+			fakeElem.style.position = "absolute";
+			fakeElem.style.transform = "translate(-50%, -50%)"
+			fakeElem.style.zIndex = "1000";
+			fakeElem.style.cursor = "grabbing";
+			fakeElem.style.top = `${e.pageY}px`;
+			fakeElem.style.left = `${e.pageX}px`;
+
+			dragged.classList.add("hide");
+			const dragHandler = getDragHandler(e.target, fakeElem, this);
 			const initVal = this.json;
 			document.addEventListener("mousemove", dragHandler);
 			document.addEventListener("mouseup", () => {
 				document.removeEventListener("mousemove", dragHandler);
+				dragged.classList.remove("hide");
+				fakeElem.remove();
 				if(this.json != initVal)
 					this.onUpdate(this.value);
 			}, { once: true });

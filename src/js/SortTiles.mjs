@@ -7,6 +7,7 @@ export default class SortTiles extends DragTiles {
 
 	addTile(column, name, dir) {
 		const newTile = document.createElement("span");
+		newTile.classList.add("sort-span");
 		newTile.dataset.column = column;
 		newTile.dataset.dir = dir;
 		newTile.innerText = `${name} | ${dir} `;

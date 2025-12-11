@@ -85,9 +85,23 @@ h2 {
 }
 
 #filters {
-	display: none;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.25s ease-out, overflow 0.25s;
 	&.show {
-		display: block;
+		transition: max-height 0.25s ease-in, overflow 0.25s;
+		max-height: 1500px;
+		overflow: unset;
+		@media screen and (min-width: 483px) {
+			max-height: 1052px;
+		}
+		@media screen and (min-width: 700px) {
+			max-height: 810px;
+		}
+		@media screen and (min-width: 981px) {
+			max-height: 712px;
+		}
+
 	}
 
 	& > div {
@@ -103,6 +117,7 @@ h2 {
 		box-sizing: border-box;
 		border-radius: 0.5rem;
 		border: solid 1px var(--text);
+		cursor: pointer;
 	}
 	input[type="text"] {
 		width: 22rem;
@@ -229,7 +244,12 @@ h2 {
 	display: flex;
 	gap: 1rem;
 	height: 204px;
+	transition: height 0.25s;
 	margin-top: 1rem;
+
+	&.collapse:hover {
+		height: 220px;
+	}
 
 	.anime-img {
 		max-height: 200px;
@@ -293,6 +313,8 @@ h2 {
 				color: inherit;
 				padding: 0;
 				cursor: pointer;
+				height: 36px;
+				padding-top: 18px;
 			}
 		}
 	}
@@ -316,32 +338,44 @@ h2 {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.5rem;
+}
 
-	span {
-		padding: 12px;
-		padding-right: 44px;
-		border: solid 1px var(--text);
-		border-radius: 22px;
-		cursor: grab;
+
+.sort-span {
+	padding: 12px;
+	padding-right: 44px;
+	border: solid 1px var(--text);
+	border-radius: 22px;
+	cursor: grab;
+	user-select: none;
+	text-transform: capitalize;
+	position: relative;
+	transition: transform 0.25s;
+	background-color: var(--primary);
+
+	&.hide {
+		visibility: hidden;
+	}
+
+	&:hover {
+		z-index: 100;
+		transform: scale(1.05);
+	}
+
+	button {
+		background: none;
+		border: none;
+		font-size: 1rem;
+		width: 44px;
+		height: 44px;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		cursor: pointer;
 		user-select: none;
-		text-transform: capitalize;
-		position: relative;
-
-		button {
-			background: none;
-			border: none;
-			font-size: 1rem;
-			width: 44px;
-			height: 44px;
-			text-align: center;
-			margin: 0;
-			padding: 0;
-			position: absolute;
-			right: 0;
-			top: 0;
-			cursor: pointer;
-			user-select: none;
-		}
 	}
 }
 
@@ -508,9 +542,22 @@ h2 {
 		display: block;
 	}
 
-	&:has(:checked) svg {
+	svg {
 		stroke: var(--text);
+		fill: #00000000;
+		transition: fill 0.25s;
+
+		&:hover {
+			fill: color(from var(--text) srgb r g b / 0.3 );
+		}
+	}
+
+	&:has(:checked) svg {
 		fill: var(--text);
+
+		&:hover {
+			fill: color(from var(--text) srgb r g b / 0.7 );
+		}
 	}
 
 	span {
