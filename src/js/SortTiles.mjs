@@ -18,6 +18,7 @@ export default class SortTiles extends DragTiles {
 		newTile.append(removeBtn);
 
 		this.container.append(newTile);
+		this.onUpdate(this.value);
 	}
 
 	removeTile(oldTile) {

@@ -1,3 +1,5 @@
+import DetailsModal from "./DetailsModal.mjs";
+
 async function convertToJson(res) {
 	if(res.ok) {
 		const resStr = await res.text();
@@ -80,19 +82,22 @@ export default class AnimeList {
 
 	display(parentElem, templateElem) {
 		this.data.map(datum => datum.node).forEach(entry => {
+			const displayModal = () => DetailsModal.Draw(entry);
+
 			const fragment = templateElem.content.cloneNode(true);
 
 			const imgElem = fragment.querySelector(".anime-img");
-			const refImg = new Image();
-			refImg.src = imgElem.src = entry.main_picture.medium;
-			imgElem.alt = entry.title;
-			refImg.addEventListener("load", () => {
-				imgElem.width = refImg.width;
-				imgElem.height = refImg.height;
+			imgElem.addEventListener("load", () => {
+				imgElem.width = imgElem.naturalWidth;
+				imgElem.height = imgElem.naturalHeight;
 			});
+			imgElem.src = entry.main_picture.medium;
+			imgElem.alt = entry.title;
+			imgElem.addEventListener("click", displayModal);
 
 			const titleElem = fragment.querySelector(".anime-title");
 			titleElem.innerText = entry.title;
+			titleElem.addEventListener("click", displayModal);
 
 			if(entry.alternative_titles?.en) {
 				const titleEnElem = fragment.querySelector(".anime-title-en");

@@ -12,7 +12,7 @@ function depthGet(obj, key) {
 
 function compare(a, b) {
 	if(isNaN(a) || isNaN(b)) {
-		return a.toString().localeCompare(b.toString());
+		return a?.toString()?.localeCompare(b?.toString());
 	}
 	else {
 		return Math.sign(parseFloat(a) - parseFloat(b));
@@ -72,10 +72,10 @@ makePattern(
 		this.values = values;
 	},
 	function(entry) {
-			const value = depthGet(entry, this.key);
-			return this.values
-				.map(value_item => value_item?.toLowerCase ? value_item.toLowerCase() : value_item)
-				.indexOf(value?.toLowerCase ? value.toLowerCase() : value) > -1;
+		const value = depthGet(entry, this.key);
+		return this.values
+			.map(value_item => value_item?.toLowerCase ? value_item.toLowerCase() : value_item)
+			.indexOf(value?.toLowerCase ? value.toLowerCase() : value) > -1;
 	},
 );
 makePattern(
@@ -207,7 +207,7 @@ export default class Filter {
 		}
 	}
 
-	#compare = function (entry1, entry2) {
+	#compare = function(entry1, entry2) {
 		let priority = 1 << this.sortOrder.length;
 		return this.sortOrder.reduce((ret, [ col, dir ]) => ret + ((priority >>= 1) * (dir == "desc" ? -1 : +1) * compare(depthGet(entry1, col), depthGet(entry2, col))), 0);
 	};

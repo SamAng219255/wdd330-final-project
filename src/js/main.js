@@ -2,7 +2,10 @@ import AnimeList from "./AnimeList.mjs";
 import Filter from "./Filter.mjs";
 import SortTiles from "./SortTiles.mjs";
 import StringFilter from "./StringFilter.mjs";
+import UserTags from "./UserTags.mjs";
+import DetailsModal from "./DetailsModal.mjs";
 const baseURL = "/mal/anime/";
+let prepared = false;
 
 const fields = [
 	"id",
@@ -70,28 +73,49 @@ function getList(url) {
 const animeList = document.getElementById("anime-list");
 const animeTemplate = document.getElementById("anime-template");
 
+function addCollapse() {
+	animeList.querySelectorAll(".card").forEach(card => {
+		const descDiv = card.querySelector("div");
+		if(descDiv.scrollHeight > descDiv.clientHeight) {
+			card.classList.add("collapse");
+		}
+		else {
+			card.classList.remove("collapse");
+		}
+	});
+}
+
 function render(list) {
 	animeList.innerHTML = "";
 	list.display(animeList, animeTemplate);
 
 	animeList.querySelectorAll(".card").forEach(card => {
-		const descDiv = card.querySelector("div");
-		if(descDiv.scrollHeight > descDiv.clientHeight) {
-			card.classList.add("collapse");
-			const showMore = card.querySelector(".anime-show-more");
-			showMore.addEventListener("click", () => {
-				if(card.classList.contains("show")) {
-					card.classList.remove("show");
-					showMore.innerText = "Show More";
-				}
-				else {
-					card.classList.add("show");
-					showMore.innerText = "Hide";
-				}
-			});
-		}
+		const showMore = card.querySelector(".anime-show-more");
+		showMore.addEventListener("click", () => {
+			if(card.classList.contains("show")) {
+				card.classList.remove("show");
+				showMore.innerText = "Show More";
+			}
+			else {
+				card.classList.add("show");
+				showMore.innerText = "Hide";
+			}
+		});
+		const img = card.querySelector(".anime-img");
+		img.addEventListener("load", () => {
+			const descDiv = card.querySelector("div");
+			if(descDiv.scrollHeight > descDiv.clientHeight) {
+				card.classList.add("collapse");
+			}
+			else {
+				card.classList.remove("collapse");
+			}
+		});
 	});
+
+	addCollapse();
 }
+window.addEventListener("resize", addCollapse);
 
 const filtersElem = document.getElementById("filters");
 const showFiltersBtn = document.getElementById("show-filters");
@@ -119,6 +143,11 @@ viewSelect.addEventListener("change", () => {
 		seasonOptions.classList.remove("show");
 
 	current_list = getList(url);
+});
+seasonOptions.addEventListener("change", () => {
+	if(viewSelect.value == "season") {
+		current_list = getList(baseURL + viewSelect.value + seasonOptions.value);
+	}
 });
 
 let current_list = getList(baseURL + viewSelect.value + seasonOptions.value);
@@ -248,22 +277,83 @@ function assembleFilterFromUI() {
 			values: ratingFilterElem.map(elem => elem.dataset.value).map(value => value == "null" ? undefined : value),
 		});
 
+	// Starred User Tag Filter
+	const starFilterMode = document.getElementById("star-select").value;
+	if(starFilterMode == "only")
+		filterSettings.patterns.push({
+			type: "list",
+			key: "node.id",
+			values: [ ...UserTags.tags.star ],
+		});
+	else if(starFilterMode == "hide")
+		filterSettings.patterns.push({
+			type: "not",
+			pattern: {
+				type: "list",
+				key: "node.id",
+				values: [ ...UserTags.tags.star ],
+			},
+		});
+
+	// Watching User Tag Filter
+	const watchFilterMode = document.getElementById("watch-select").value;
+	if(watchFilterMode == "only")
+		filterSettings.patterns.push({
+			type: "list",
+			key: "node.id",
+			values: [ ...UserTags.tags.watch ],
+		});
+	else if(watchFilterMode == "hide")
+		filterSettings.patterns.push({
+			type: "not",
+			pattern: {
+				type: "list",
+				key: "node.id",
+				values: [ ...UserTags.tags.watch ],
+			},
+		});
+
+	// Hidden User Tag Filter
+	const hideFilterMode = document.getElementById("hide-select").value;
+	if(hideFilterMode == "only")
+		filterSettings.patterns.push({
+			type: "list",
+			key: "node.id",
+			values: [ ...UserTags.tags.hide ],
+		});
+	else if(hideFilterMode == "hide")
+		filterSettings.patterns.push({
+			type: "not",
+			pattern: {
+				type: "list",
+				key: "node.id",
+				values: [ ...UserTags.tags.hide ],
+			},
+		});
+
 	return filterSettings;
 }
 
 function updateView() {
-	if(!current_list)
+	if(!prepared)
 		return;
-	current_list.filters = [new Filter({
-		sortOrder: sortTiles.value.map(({column, dir}) => [column, dir]),
-		rule: assembleFilterFromUI()
-	})];
+	current_list.filters = [
+		new Filter({
+			sortOrder: sortTiles.value.map(({ column, dir }) => [ column, dir ]),
+			rule: assembleFilterFromUI(),
+		}),
+	];
 
 	if(current_list.dataSet)
 		render(current_list);
 	else
 		current_list.fetch(render);
 }
-updateView();
-
 document.querySelectorAll(".update-trigger").forEach(elem => elem.addEventListener("change", updateView));
+
+UserTags.init();
+
+DetailsModal.updateView = updateView;
+
+prepared = true;
+updateView();
