@@ -40,7 +40,7 @@ export default defineConfig([
 			"consistent-return": "off",
 			"func-names": "off",
 			"max-len": "off",
-			"no-console": "warn",
+			"no-console": [ "error", { allow: [ "warn", "error" ] } ],
 			"no-param-reassign": [
 				"error",
 				{ props: false },

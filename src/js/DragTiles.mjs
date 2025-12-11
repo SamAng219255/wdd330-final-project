@@ -93,7 +93,7 @@ export default class DragTiles {
 			const fakeElem = dragged.cloneNode(true);
 			document.body.append(fakeElem);
 			fakeElem.style.position = "absolute";
-			fakeElem.style.transform = "translate(-50%, -50%)"
+			fakeElem.style.transform = "translate(-50%, -50%)";
 			fakeElem.style.zIndex = "1000";
 			fakeElem.style.cursor = "grabbing";
 			fakeElem.style.top = `${e.pageY}px`;

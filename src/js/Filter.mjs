@@ -208,9 +208,8 @@ export default class Filter {
 	}
 
 	#compare = function(entry1, entry2) {
-		let priority = 1 << this.sortOrder.length;
-		for(let i=0; i<this.sortOrder.length; i++) {
-			const [col, dir] = this.sortOrder[i];
+		for(let i = 0; i < this.sortOrder.length; i++) {
+			const [ col, dir ] = this.sortOrder[i];
 			const compRes = compare(depthGet(entry1, col), depthGet(entry2, col));
 			if(compRes != 0)
 				return (dir == "desc" ? -1 : +1) * compRes;

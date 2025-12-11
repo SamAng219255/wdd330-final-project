@@ -7,12 +7,12 @@ async function convertToJson(res) {
 			return JSON.parse(resStr);
 		}
 		catch {
-			console.log("Response Value: ", resStr);
+			//console.log("Response Value: ", resStr);
 			throw new Error("Malformed Response");
 		}
 	}
 	else {
-		console.log("Response: ", res);
+		//console.log("Response: ", res);
 		throw new Error("Bad Response");
 	}
 }
